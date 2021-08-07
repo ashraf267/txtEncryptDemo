@@ -31,9 +31,18 @@
 				var total = "";
 				var i;
 				for(i = 0; i < realValueArr.length; realValueArr[i++]) {
-					total += this.characters[Math.floor(Math.random() * 61)];
+					total += this.characters[Math.floor(Math.random() * this.characters.length)];
 				}
-				return document.getElementById("encryptedValue").innerHTML = total + "-" + total.length;
+
+				// Create a 4 char encryptKey
+				var encryptKey = "";
+				var k;
+				for(k = 0; k < 4; k++) {
+					encryptKey += this.characters[Math.floor(Math.random() * this.characters.length)];
+				}
+				// document.getElementById("encryptedValue").innerHTML = total + "-" + total.length;
+				document.getElementById("encryptedValue").innerHTML = total;
+				document.getElementById("encryptedValueKey").innerHTML = encryptKey;
 			},
 			decryptFunc: function() {},
 			demo: function() {
