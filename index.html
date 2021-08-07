@@ -28,12 +28,12 @@
 			encryptFunc: function() {
 				let realValue = document.getElementById("encryptForm").elements.namedItem("encryptValue").value;
 				const realValueArr = realValue.split("");
-				var total = 0;
+				var total = "";
 				var i;
 				for(i = 0; i < realValueArr.length; realValueArr[i++]) {
 					total += this.characters[Math.floor(Math.random() * 61)];
 				}
-				return document.getElementById("encryptedValue").innerHTML = total;
+				return document.getElementById("encryptedValue").innerHTML = total + "-" + total.length;
 			},
 			decryptFunc: function() {},
 			demo: function() {
