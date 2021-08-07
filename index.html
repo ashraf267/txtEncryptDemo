@@ -4,8 +4,17 @@
 </head>
 <body>
 
-	<div class="encrypt"></div>
-	<div class="decrypt"></div>
+	<div class="encrypt">
+		<input type="text" id="encryptValue" name="encryptValue" placeholder="Encypt your text" required="required"> <!-- Remember to add pattern and title attr here -->
+		<input type="button" value="Encrypt">
+		<p id="encryptedValue"></p>
+		<p id="encryptedValueKey"></p>
+	</div>
+	<div class="decrypt">
+		<input type="text" id="decryptValue" name="decryptValue" placeholder="Decrypt your text" required="required"> <!-- Remember to add pattern and title attr here too... -->
+		<input type="text" id="demoKey" name="demoKey" placeholder="Key to decrypt" required="required"> <!-- ...and here also -->
+		<input type="button" value="Decrypt">
+	</div>
 
 	<script type="text/javascript"></script>
 
